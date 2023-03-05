@@ -1,0 +1,67 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
+  width: 400px;
+  height: 180px;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.Easy {
+  background-color: rgb(209, 222, 203);
+}
+
+.Medium {
+  background-color: rgb(238, 238, 199);
+}
+
+.Hard {
+  background-color: rgb(244, 224, 224);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.type {
+  font-weight: bold;
+  color: gray;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.card-text {
+  margin: auto;
+}
+
+.arrow {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 3px 60px;
+}
+
+.arrow:hover {
+  border: 1px solid gray;
+}
+
+.arrow-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  right: 20px;
+}

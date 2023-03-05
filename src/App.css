@@ -10,13 +10,21 @@
   border: 1px solid lightgray;
   border-radius: 10px;
   background-color: transparent;
-  box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
   width: 400px;
+  box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
   height: 180px;
   margin: auto;
   padding: 40px;
   text-align: center;
   position: relative;
+}
+
+img {
+  margin: auto;
+  width: 10%;
+  position: absolute;
+  bottom: 30%;
+  right: 45%;
 }
 
 .Easy {
@@ -44,6 +52,7 @@
 
 .card-text {
   margin: auto;
+  width: 100%;
 }
 
 .arrow {

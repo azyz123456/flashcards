@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 function Card(props) {
+    const image = (<img src={props.img} />);
     return (
         <div
             className={"card " + props.difficulty}
@@ -9,6 +10,7 @@ function Card(props) {
             <p className="type">{props.flipped ? "Definition" : "Term"}</p>
             <p className="card-text">
                 {props.flipped ? props.answer : props.name}
+                {props.flipped ? image : null}
             </p>
             <div className="arrow-box">
                 <div

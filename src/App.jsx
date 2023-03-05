@@ -11,12 +11,13 @@ function App() {
   //initialie cards by mapping data to cards
   let initialCards = [];
   for (let i=0; i<data.length; i++) {
-    const card = {
+    let card = {
       "flipped": false,
       "name": data[i].name,
       "answer": data[i].answer,
       "number": i,
-      "difficulty": data[i].difficulty
+      "difficulty": data[i].difficulty,
+      "img": data[i].img
     };
     initialCards.push(card);
   }
@@ -27,7 +28,7 @@ function App() {
     
   function flipCard(cardNumber) {
     //change the card flipped to the opposite value
-    const newCards = [...cards];
+    let newCards = [...cards];
     for (let i=0; i<cards.length; i++) {
       if (cardNumber===i) {
         newCards[i].flipped = !(cards[i].flipped);
@@ -39,19 +40,21 @@ function App() {
     console.log(cards);
   }
 
-  function clickNext() {
+  function clickNext(e) {
     //draw a random next card when the right arrow is clicked
     //ensures that the next card is not the same as the current card
-    const index = Math.floor(Math.random() * data.length);
+    let index = Math.floor(Math.random() * data.length);
     while (index === card.number) {
       index = Math.floor(Math.random() * data.length);
     }
     setPrevCard(card);
     setCard(cards[index]);
+    e.stopPropagation();
   }
 
-  function clickPrev() {
+  function clickPrev(e) {
     setCard(prevCard);
+    e.stopPropagation();
   }
 
   return (
@@ -65,6 +68,7 @@ function App() {
           answer={card.answer}
           cardNumber={card.number}
           difficulty={card.difficulty}
+          img={card.img}
           onClick={flipCard}
           onClickNext={clickNext}
           onClickPrev={clickPrev}

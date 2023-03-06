@@ -10,10 +10,23 @@
   border: 1px solid lightgray;
   border-radius: 10px;
   background-color: transparent;
-  width: 400px;
+  width: 100%;
   box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
   height: 180px;
   margin: auto;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.result-card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 50vw;
+  box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
+  margin: auto;
+  margin-bottom: 15px;
   padding: 40px;
   text-align: center;
   position: relative;
@@ -25,18 +38,6 @@ img {
   position: absolute;
   bottom: 30%;
   right: 45%;
-}
-
-.Easy {
-  background-color: rgb(209, 222, 203);
-}
-
-.Medium {
-  background-color: rgb(238, 238, 199);
-}
-
-.Hard {
-  background-color: rgb(244, 224, 224);
 }
 
 .card:hover {
@@ -73,4 +74,83 @@ img {
   bottom: 5px;
   left: 20px;
   right: 20px;
+}
+
+.shuffle, .test {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 75px;
+  height: 30px;
+  padding: 10px 0;
+}
+
+.shuffle:hover, .test:hover {
+  border: 1px solid rgb(84, 84, 205);
+  cursor: pointer;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+ul#navbar {
+  width: 100vw;
+  height: 50px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display:inline;
+  text-align: left;
+  margin: auto;
+  margin-top: 0px;
+  background-color: white;
+  border-bottom: 1px solid rgb(234, 228, 228);
+  box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
+  /* Any other CSS you want */
+}
+
+ul#navbar li {
+  display:inline;
+  margin: 10px;
+}
+
+.submit-btn {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: auto;
+  width: 150px;
+  height: 30px;
+  padding: 10px 0;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(242, 242, 242);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.title {
+  margin-top: 50px;
+}
+
+.warning {
+  font-style: italic;
+  color: red;
+  font-size: 14px;
+  margin: 10px;
 }

@@ -103,9 +103,9 @@ function App() {
 
   const app = (
     <div className="main">
-      <h1>React.js Flashcards</h1>
-      <p>How much do you know about React? Test your frontend development knowledge here!</p>
-      <h4>{(index+1) + "/" + data.length}</h4>
+      <h1 className="title">React.js Flashcards</h1>
+      <p className="description">How much do you know about React? Test your frontend development knowledge here!</p>
+      <h4 className="order">{(index+1) + "/" + data.length}</h4>
         <Card 
             flipped={cards[order[index]].flipped}
             name={cards[order[index]].name}

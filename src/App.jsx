@@ -1,3 +1,14 @@
+/*
+
+To do:
+
+Improve UI for the quiz page
+Only show the warning sign when appropriate
+Add card flipping animation
+Allow users to create new flashcards (might be difficult)
+
+*/
+
 import { useState } from 'react';
 import './App.css';
 import Card from './Card.jsx';
@@ -107,7 +118,8 @@ function App() {
             onClickPrev={clickPrev}
           />
           <div className="shuffle" onClick={shuffleCards}>
-            Shuffle
+            <img className="shuffle-icon" src="https://cdn-icons-png.flaticon.com/512/3580/3580329.png"></img>
+            <div className="shuffle-text">Shuffle</div>
           </div>
       </div>
   );

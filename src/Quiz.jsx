@@ -16,10 +16,12 @@ function Quiz(props) {
 
     for (let i=0; i<props.cards.length; i++) {
         //create questions and input fields
-        let item = (
-            <div>
-                <p>{"Term: " + props.cards[i].name}</p>
+        let question = (
+            <div className="result-card">
+                <p className="term">Term</p>
+                <p className="term-text">{props.cards[i].name}</p>
                 <input
+                    className="quiz-input"
                     type="text"
                     placeholder="Definition"
                     value={guesses[i].guess}
@@ -27,7 +29,7 @@ function Quiz(props) {
                 />
             </div>
         );
-        questions.push(item);
+        questions.push(question);
     }
 
     const [submitted, setSubmitted] = useState(false);
@@ -63,6 +65,7 @@ function Quiz(props) {
     function handleRetake() {
         setSubmitted(false);
         setGuesses(initialGuesses);
+        setMessage("");
     }
 
     const quizTemplate = (
@@ -71,7 +74,7 @@ function Quiz(props) {
             {questions}
             <h2>All done! Ready to submit your test?</h2>
             <div className="submit-btn" onClick={handleSubmit}>Submit test</div>
-            <div className="warning">{message}</div>
+            <div className="warning red">{message}</div>
         </div>
     );
 

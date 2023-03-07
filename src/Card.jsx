@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function Card(props) {
-    const image = (<img src={props.img} />);
+    const image = (<img className="card-img" src={props.img} />);
     return (
         <div
             className={"card " + props.difficulty}

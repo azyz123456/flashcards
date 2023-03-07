@@ -19,6 +19,7 @@
   position: relative;
 }
 
+
 .result-card {
   border: 1px solid lightgray;
   border-radius: 10px;
@@ -32,7 +33,11 @@
   position: relative;
 }
 
-img {
+.shuffle-icon {
+  height: 50%;
+}
+
+.card-img {
   margin: auto;
   width: 10%;
   position: absolute;
@@ -76,19 +81,19 @@ img {
   right: 20px;
 }
 
-.shuffle, .test {
-  border: 1px solid lightgray;
-  border-radius: 10px;
+.shuffle {
   margin-top: 10px;
-  margin-right: 10px;
-  width: 75px;
   height: 30px;
   padding: 10px 0;
+  margin: auto;
 }
 
-.shuffle:hover, .test:hover {
-  border: 1px solid rgb(84, 84, 205);
-  cursor: pointer;
+.shuffle:hover {
+  cursor:pointer;
+}
+
+.shuffle-text {
+  margin: auto;
 }
 
 .main {
@@ -150,7 +155,33 @@ ul#navbar li {
 
 .warning {
   font-style: italic;
-  color: red;
   font-size: 14px;
   margin: 10px;
+}
+
+.term {
+  color: rgb(164, 160, 160);
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.term-text {
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.quiz-input {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(237, 237, 246);
+  color: black;
+  padding: 5px;
+  width: 100%;
+}
+
+.quiz-input:focus {
+  outline: none;
+  border-bottom: 2px solid black;
 }

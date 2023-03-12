@@ -88,9 +88,6 @@
 
 .main {
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
 }
 
 ul#navbar {
@@ -212,7 +209,7 @@ ul#navbar li {
   border-radius: 10px;
   background-color: transparent;
   box-shadow:0 1px 20px rgba(176, 169, 169, 0.3);
-  height: 180px;
+  height: 33vh;
   padding: 40px;
   text-align: center;
   position: relative;
@@ -233,5 +230,5 @@ ul#navbar li {
 }
 
 .order {
-  width: 100vw;
+  margin: 10px auto;
 }

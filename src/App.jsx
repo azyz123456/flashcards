@@ -2,10 +2,11 @@
 
 To do:
 
-Improve UI for the quiz page
-Only show the warning sign when appropriate
-Add card flipping animation
-Allow users to create new flashcards (might be difficult)
+Fix bug where going to the next card when on the "definitions" page also causes flipping
+maybe just do away with the flipping animation?
+
+Improve UI for the quiz page in full-screen mode
+Allow users to create new flashcards
 
 */
 
@@ -80,24 +81,47 @@ function App() {
       }
     }
     setCards(newCards);
-    console.log(cards);
+    console.log("cards:", cards);
   }
 
   function clickNext(e) {
+    //the flipped property of the current card should be set to false
+
     if (index === order.length - 1) {
       setIndex(0);
     } else {
       setIndex(index+1);
     }
+
+    let newCards = [...cards];
+    for (let i=0; i<cards.length; i++) {
+      if (cardNumber===i) {
+        newCards[i].flipped = false;
+      }
+    }
+    setCards(newCards);
+    console.log("Cards:", cards);
+
     e.stopPropagation();
   }
 
   function clickPrev(e) {
+
     if (index === 0) {
       setIndex(order.length - 1);
     } else {
       setIndex(index-1);
     }
+
+    let newCards = [...cards];
+    for (let i=0; i<cards.length; i++) {
+      if (cardNumber===i) {
+        newCards[i].flipped = false;
+      }
+    }
+    setCards(newCards);
+    console.log("Cards:", cards);
+
     e.stopPropagation();
   }
 
